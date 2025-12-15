@@ -3,199 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaurav AI - Gemini Ultra Pro</title>
+    <title>GauravAI | Premium AI Access</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
     <style>
-        body { font-family: 'Outfit', sans-serif; }
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: white; }
+        h1, h2, h3, .brand-font { font-family: 'Orbitron', sans-serif; }
         
-        .glow-text {
-            text-shadow: 0 0 20px rgba(6, 182, 212, 0.8);
+        /* Glassmorphism Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
         }
-
-        /* Hero Background */
-        .hero-bg {
-            background: radial-gradient(circle at center, #1e1b4b 0%, #020617 100%);
+        .glass:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
         }
-
-        /* --- CARD STYLES --- */
-
-        /* 1. The Trial Card (₹49) - Stylish but slightly smaller */
-        .trial-card {
-            background: linear-gradient(145deg, #0f172a 0%, #1e1b4b 100%);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            box-shadow: 0 0 30px rgba(56, 189, 248, 0.1);
+        
+        /* Neon Glows */
+        .glow-text { text-shadow: 0 0 10px rgba(6, 182, 212, 0.6); }
+        .glow-btn-green { box-shadow: 0 0 15px rgba(34, 197, 94, 0.4); }
+        .glow-btn-purple { box-shadow: 0 0 20px rgba(147, 51, 234, 0.5); }
+        
+        /* Animations */
+        @keyframes pulse-red {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
-
-        /* 2. The MAIN PRO CARD (₹999) - Ultra Lavish */
-        .pro-card {
-            background: linear-gradient(135deg, #2e1065 0%, #000000 100%);
-            /* Gold and Purple mixed border for premium feel */
-            border: 2px solid transparent;
-            background-clip: padding-box, border-box;
-            background-origin: padding-box, border-box;
-            background-image: linear-gradient(#000000, #1e1b4b), linear-gradient(45deg, #a855f7, #ec4899, #eab308);
-            
-            /* Big Glow */
-            box-shadow: 0 0 60px rgba(168, 85, 247, 0.5);
-            transform: scale(1.05); /* Make it naturally bigger */
-        }
-
-        /* Mobile adjustments */
-        @media (max-width: 768px) {
-            .pro-card { transform: scale(1); margin-top: 20px; }
-        }
+        .urgent-pulse { animation: pulse-red 2s infinite; }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100">
+<body class="relative overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 bg-gray-950/90 backdrop-blur-md border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-                        Gaurav AI
-                    </span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-6">
-                        <a href="#home" class="hover:text-blue-400 transition">Home</a>
-                        <a href="#pricing" class="text-blue-400 font-bold transition">Plans</a>
-                        <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="fixed top-0 left-0 w-96 h-96 bg-purple-900/30 rounded-full blur-[120px] -z-10"></div>
+    <div class="fixed bottom-0 right-0 w-96 h-96 bg-cyan-900/30 rounded-full blur-[120px] -z-10"></div>
+
+    <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white p-4 rounded-full shadow-lg transition transform hover:scale-110 flex items-center gap-2">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="font-bold hidden md:inline">Chat Now</span>
+    </a>
+
+    <nav class="flex justify-between items-center p-6 max-w-6xl mx-auto">
+        <div class="text-2xl font-bold tracking-widest text-white brand-font">GAURAV<span class="text-cyan-400">AI.</span></div>
+        <a href="#pricing" class="px-4 py-2 border border-cyan-500/50 rounded-lg text-cyan-400 text-xs font-bold hover:bg-cyan-500/10 transition">
+            GET ACCESS
+        </a>
     </nav>
 
-    <section id="home" class="hero-bg min-h-[70vh] flex items-center justify-center pt-20 px-4 pb-10">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="inline-block px-4 py-1 mb-4 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm animate-pulse">
-                 🚀 New: Unlimited Veo Video Generation Added
-            </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-                Create Like a Pro with <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 glow-text">Gaurav AI Ultra</span>
-            </h1>
-            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-                Join the fastest growing community of AI Creators. Start with a refundable trial or go Unlimited directly.
-            </p>
-            <a href="#pricing" class="bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition">
-                View Plans
+    <header class="text-center mt-8 mb-16 px-4 max-w-4xl mx-auto">
+        <div class="inline-block px-4 py-1 mb-6 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-bold uppercase tracking-wider">
+            ⚡ Save Time | 💰 Save Money | 🤖 Work Smarter
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+            Access Premium <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 glow-text">AI Tools</span> at One Place
+        </h1>
+        
+        <p class="text-gray-400 text-lg mb-8">
+            ChatGPT 4 • Gemini Advanced • Canva Pro • Coding AI • Automation <br>
+            <span class="text-white font-semibold">Stop paying monthly subscriptions. Get everything here.</span>
+        </p>
+
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+            <a href="#pricing" class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold text-lg hover:scale-105 transition glow-btn-purple">
+                🔥 Get Instant Access
+            </a>
+            <a href="https://wa.me/91XXXXXXXXXX" class="px-8 py-4 rounded-xl border border-gray-600 hover:border-green-500 hover:text-green-400 transition font-bold text-lg flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp"></i> Contact on WhatsApp
             </a>
         </div>
+    </header>
+
+    <section class="max-w-6xl mx-auto px-4 mb-20">
+        <div class="glass rounded-2xl p-8 border-l-4 border-cyan-500">
+            <h2 class="text-2xl font-bold mb-6 text-center md:text-left">🔐 Why 1000+ Users Trust Gaurav AI?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-infinity text-cyan-400 text-xl"></i>
+                    <span>Long-term Stable Access</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-bolt text-yellow-400 text-xl"></i>
+                    <span>Instant ID & Password</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-headset text-green-400 text-xl"></i>
+                    <span>Personal WhatsApp Support</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-laptop-code text-purple-400 text-xl"></i>
+                    <span>No Tech Skills Required</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="pricing" class="py-16 bg-black relative overflow-hidden">
+    <section class="max-w-6xl mx-auto px-4 mb-20">
+        <h2 class="text-center text-3xl font-bold mb-10">What You Get Inside</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass p-6 rounded-xl hover:shadow-[0_0_20px_rgba(6,182,212,0.3)]">
+                <div class="bg-blue-900/30 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-blue-400 text-2xl"><i class="fa-solid fa-robot"></i></div>
+                <h3 class="font-bold text-lg mb-2">AI Tools Access</h3>
+                <p class="text-gray-400 text-sm">ChatGPT Plus, Gemini Advanced, Claude 3 & Coding AIs.</p>
+            </div>
+            <div class="glass p-6 rounded-xl hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]">
+                <div class="bg-purple-900/30 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-purple-400 text-2xl"><i class="fa-solid fa-palette"></i></div>
+                <h3 class="font-bold text-lg mb-2">Design & Content</h3>
+                <p class="text-gray-400 text-sm">Canva Pro, AI Image Generators, Video Creation Tools.</p>
+            </div>
+            <div class="glass p-6 rounded-xl hover:shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+                <div class="bg-green-900/30 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-green-400 text-2xl"><i class="fa-solid fa-book-open"></i></div>
+                <h3 class="font-bold text-lg mb-2">Study & Exams</h3>
+                <p class="text-gray-400 text-sm">Premium Notes, PDF Tools, Test Series Support.</p>
+            </div>
+            <div class="glass p-6 rounded-xl hover:shadow-[0_0_20px_rgba(234,179,8,0.3)]">
+                <div class="bg-yellow-900/30 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-yellow-400 text-2xl"><i class="fa-solid fa-gears"></i></div>
+                <h3 class="font-bold text-lg mb-2">Automation Help</h3>
+                <p class="text-gray-400 text-sm">YouTube & Blog Automation workflows.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="max-w-4xl mx-auto px-4 mb-20">
+        <h2 class="text-center text-3xl font-bold mb-4">Choose Your Plan</h2>
+        <p class="text-center text-gray-400 mb-10">Prices increasing soon. Lock your spot now.</p>
         
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-white">Choose Your Power</h2>
-                <p class="text-gray-400 mt-2">Transparent Pricing. No Hidden Fees.</p>
-            </div>
+        <div class="grid md:grid-cols-2 gap-8 items-center">
             
-            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
+            <div class="glass rounded-2xl p-8 relative border-green-500/30">
+                <h3 class="text-xl font-bold text-green-400">🔥 Starter Trial</h3>
+                <div class="my-4">
+                    <span class="text-gray-500 line-through text-lg">₹199</span>
+                    <span class="text-4xl font-bold text-white ml-2">₹49</span>
+                    <span class="text-xs text-gray-400 block mt-1">Limited Time Offer</span>
+                </div>
+                <ul class="space-y-3 mb-8 text-sm text-gray-300">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i> 24 Hours Trial Access</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i> Instant Delivery</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i> Basic Support</li>
+                </ul>
+                <button onclick="window.location.href='https://razorpay.com/payment-link-placeholder'" class="w-full py-3 rounded-xl bg-green-600 hover:bg-green-500 text-white font-bold transition glow-btn-green">
+                    Pay ₹49 & Start
+                </button>
+            </div>
+
+            <div class="glass rounded-2xl p-8 relative border-purple-500 transform md:scale-105 bg-purple-900/10">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black text-xs font-bold px-4 py-1 rounded-full uppercase">
+                    ⭐ Best Seller
+                </div>
                 
-                <div class="trial-card w-full max-w-sm rounded-3xl p-6 text-center relative opacity-90 hover:opacity-100 transition duration-300">
-                    <h3 class="text-xl font-bold text-gray-300 mb-2">Verification Trial</h3>
-                    <div class="mb-4">
-                        <span class="text-4xl font-bold text-white">₹49</span>
-                    </div>
-
-                    <div class="bg-blue-900/30 border border-blue-500/30 text-blue-300 text-xs font-bold px-3 py-1 rounded-full inline-block mb-6">
-                        <i class="fa-solid fa-rotate-left mr-1"></i> WILL BE REFUNDED
-                    </div>
-
-                    <ul class="text-left space-y-3 mb-8 text-gray-400 text-sm px-2">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-blue-500 mr-2"></i> 3 Days Access</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-blue-500 mr-2"></i> Test Video Generation</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-blue-500 mr-2"></i> Basic Tools Only</li>
-                    </ul>
-
-                    <a href="payment.html" class="block w-full border border-gray-600 hover:border-white text-white font-semibold py-3 rounded-xl transition">
-                        Try Now (Refundable)
-                    </a>
+                <h3 class="text-2xl font-bold text-white">🚀 Pro Master Access</h3>
+                <div class="my-4">
+                    <span class="text-gray-500 line-through text-lg">₹2999</span>
+                    <span class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 ml-2">₹999</span>
+                </div>
+                
+                <div class="bg-red-500/20 border border-red-500/50 text-red-300 px-4 py-2 rounded-lg text-sm font-bold mb-6 flex items-center justify-center gap-2">
+                    <div class="w-2 h-2 bg-red-500 rounded-full urgent-pulse"></div>
+                    Only 20 Slots Left Today
                 </div>
 
-                <div class="pro-card w-full max-w-md rounded-3xl p-8 text-center relative">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-lg">
-                        Recommended for YouTubers
-                    </div>
+                <ul class="space-y-4 mb-8 text-sm text-gray-200">
+                    <li class="flex items-center"><i class="fa-solid fa-star text-yellow-400 mr-2"></i> <strong>Full Premium Access</strong></li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Lifetime Validity</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Personal WhatsApp Support</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Secret Resources & Updates</li>
+                </ul>
 
-                    <h3 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-pink-200 mb-1 mt-2">GEMINI ULTRA PRO</h3>
-                    <p class="text-purple-300 text-sm mb-6">Ultimate Content Creation Suite</p>
-                    
-                    <div class="mb-2">
-                        <span class="text-6xl font-extrabold text-white glow-text">45,000</span>
-                        <div class="text-sm text-gray-400 font-medium">CREDITS / MONTH</div>
-                    </div>
-
-                    <div class="text-3xl font-bold text-white mb-6">
-                        ₹999 <span class="text-lg text-gray-400 font-normal">/mo</span>
-                    </div>
-
-                    <div class="bg-gray-900/50 rounded-xl p-4 mb-8 text-left space-y-4 border border-gray-700/50">
-                        <div class="flex items-center">
-                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center mr-3 shadow-lg shadow-purple-500/30">
-                                <i class="fa-solid fa-video text-xs text-white"></i>
-                            </div>
-                            <span class="text-gray-200 font-semibold">Unlimited <span class="text-purple-400">Veo Video</span> Gen</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center mr-3">
-                                <i class="fa-solid fa-infinity text-xs text-green-400"></i>
-                            </div>
-                            <span class="text-gray-300">No Credit Limit Issues</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center mr-3">
-                                <i class="fa-solid fa-toolbox text-xs text-blue-400"></i>
-                            </div>
-                            <span class="text-gray-300">All AI Tools Unlocked</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center mr-3">
-                                <i class="fa-solid fa-crown text-xs text-yellow-400"></i>
-                            </div>
-                            <span class="text-gray-300">Priority Processing (Fast)</span>
-                        </div>
-                    </div>
-
-                    <a href="#contact" class="block w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-4 rounded-xl shadow-xl shadow-purple-900/40 transition transform hover:scale-105">
-                        Get Gemini Ultra PRO <i class="fa-solid fa-bolt ml-2"></i>
-                    </a>
-                    <p class="text-xs text-gray-500 mt-4">Safe & Secure Payment</p>
-                </div>
-
+                <button onclick="window.location.href='https://razorpay.com/payment-link-placeholder'" class="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold text-lg hover:scale-[1.02] transition glow-btn-purple border border-white/20">
+                    Unlock Full Access @ ₹999
+                </button>
+                <p class="text-center text-xs text-gray-500 mt-3"><i class="fa-solid fa-lock"></i> 100% Secure Payment</p>
             </div>
+
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-gray-900">
-        <div class="max-w-xl mx-auto px-4">
-            <div class="bg-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700">
-                <h2 class="text-2xl font-bold text-white mb-6 text-center">Get the Pro Plan</h2>
-                <p class="text-center text-gray-400 mb-6">Contact us to activate your ₹999 Plan immediately.</p>
-                <form>
-                    <div class="space-y-4">
-                        <input type="text" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-purple-500 focus:outline-none" placeholder="Enter your name">
-                        <input type="tel" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-purple-500 focus:outline-none" placeholder="WhatsApp Number">
-                        <button type="button" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 rounded-lg transition">
-                            Request Activation
-                        </button>
-                    </div>
-                </form>
-            </div>
+    <section class="max-w-2xl mx-auto px-4 mb-20 text-center">
+        <div class="text-yellow-400 text-xl mb-2">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
         </div>
+        <p class="text-lg italic text-gray-300">"Simple, affordable and very useful. I use it for my coding projects and college notes daily."</p>
+        <p class="text-gray-500 font-bold mt-2">- Rahul S., B.Tech Student</p>
     </section>
 
-    <footer class="bg-black py-8 text-center text-gray-600 text-sm">
-        <p>&copy; 2025 Gaurav AI. All rights reserved.</p>
+    <section class="border-t border-gray-800 bg-black/40 py-12 px-4 text-center">
+        <h3 class="text-2xl font-bold mb-4">📞 Need Access Instantly?</h3>
+        <p class="text-gray-400 mb-6">Message us on WhatsApp & get your ID within minutes.</p>
+        <a href="https://wa.me/91XXXXXXXXXX" class="inline-flex items-center gap-2 px-6 py-3 bg-green-600 rounded-lg text-white font-bold hover:bg-green-500 transition">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+    </section>
+
+    <footer class="py-8 text-center px-4">
+        <div class="max-w-4xl mx-auto bg-gray-900/50 rounded-lg p-4 mb-6 border border-gray-800">
+            <p class="text-xs text-gray-500">
+                ⚠️ <span class="font-bold text-gray-400">Disclaimer:</span> This is a service-based platform providing educational resources. We do not sell cracked or illegal software. All tools are shared for educational and productivity purposes only.
+            </p>
+        </div>
+        <p class="text-gray-600 text-xs">&copy; 2024 GauravAI. All Rights Reserved.</p>
+        <div class="mt-2 space-x-4 text-xs text-gray-500">
+            <a href="#" class="hover:text-white">Terms</a>
+            <a href="#" class="hover:text-white">Privacy</a>
+            <a href="#" class="hover:text-white">Refund Policy</a>
+        </div>
     </footer>
 
 </body>
